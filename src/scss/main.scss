@@ -1,0 +1,1089 @@
+@import 'normalize';
+@import 'variables';
+@import 'mixins';
+
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensansregular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans Light";
+  src: url("../fonts/opensanslight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans SemiB";
+  src: url("../fonts/opensanssemibold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans ExtraB";
+  src: url("../fonts/opensansextrabold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Nothing You Could Do";
+  src: url("../fonts/nothingyoucoulddo.ttf") format("truetype");
+}
+
+body {
+    font-size: 62.5%;
+    line-height: $lineheight;
+    font-family: $fontlight;
+    max-width: 100%;
+}
+
+.hidden{
+  position: absolute;
+  font-size: 0;
+  overflow: hidden;
+}
+/*///////////////////////////////////////////////PAGE ACCUEIL/////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////HEADER///////////////////////////////////////////////////////////////////*/
+
+header{
+  background: url("../images/general/banner_bis.jpg")no-repeat;
+  background-size: cover;
+  padding-bottom:20em;
+}
+
+.croop{
+  padding-bottom: 0;
+}
+
+.header__logolink{
+  display: flex;
+  align-items: center;
+  width: 250px;
+  text-decoration: none;
+}
+
+.header__logoimg{
+  width: 75px;
+  height: 75px;
+  //display: block;
+}
+
+
+.header__maindiv{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(1,1,1,.6);
+  height: 80px;
+  width: 96%;
+  padding: 0 2%;
+  position: fixed;
+  z-index: 1;
+}
+
+.nav ul{
+  display: flex;
+  align-items: center;
+  margin-right: 6em;
+}
+
+.nav li{
+    display: inline-block;
+  margin-right: 15px;
+}
+.nav .active{
+  color:$gold;
+  border-bottom: 2px solid $gold;
+  padding-bottom: 0.5em;
+  font-size: 1.8em;
+
+}
+.nav a{
+    text-decoration: none;
+    font-size: 1.6em;
+    color: white;
+    letter-spacing: 0.02em;
+    text-shadow: 1px 1px black;
+    margin-left: 20px;
+    font-family: $fontreg;
+}
+.nav__contact{
+  width: 130px;
+}
+.nav__contact a{
+  @include button;
+  text-align: center;
+  display: inline-block;
+  letter-spacing: unset;
+  font-size: 1.3em;
+  width: 120px;
+  padding: 0.6em 10%;
+  border: none;
+  background-color: $gold;
+  text-shadow: initial;
+}
+
+.nav__contact a:hover{
+  background-color: rgb(140,116,67);
+}
+
+.header__infos{
+  text-align: center;
+  //margin-top: 3em;
+}
+
+.header__name{
+  font-family: $font;
+  font-size: 6em;
+  color: white;
+  font-weight: 300;
+  padding-top: 4.5em;
+  margin-bottom: 0.7em;
+  letter-spacing: 0.08em;
+  text-shadow: 1.5px 1px black;
+}
+
+.sizedownname{
+  font-size: 1.5em;
+  font-family: $fontreg;
+  color: white;
+  border-bottom: none;
+
+}
+
+.header__job{
+  font-size: 2.5em;
+  text-transform: uppercase;
+  color: white;
+  margin: 0 auto 4em;
+  font-family: $fontreg;
+  letter-spacing: 0.2em;
+  text-shadow: 4px 4px black;
+}
+
+.sizedownjob{
+  font-size: 2em;
+  margin-bottom: 6em;
+}
+
+.header__navcat{
+  font-size: 8em;
+  color: $gold;
+  font-family: $font;
+  margin: 0 auto 1em;
+  padding-bottom: 1.5em;
+  padding-top: 2.5em;
+  letter-spacing: 0.1em;
+  text-shadow: 1.5px 1.5px black;
+}
+
+.header__contact{
+  @include button;
+  font-weight: 300;
+}
+.header__contact:hover, .header__contact:focus{
+  @include button_hover;
+}
+
+/*//////////////////////////////////////////END_HEADER///////////////////////////////////////////////////////////*/
+
+
+/*//////////////////////////////////////////ENCART_APROPOS///////////////////////////////////////////////////////////*/
+
+.eap__laurie img{
+  width: 300px;
+  height: auto;
+  margin-right: 5%;
+  border: 0.5px solid $gold;
+  padding: 8px;
+}
+
+.eap__laurie{
+  border-bottom: 1px solid $gold;
+}
+.eap__content{
+  display: flex;
+  align-items:center;
+  justify-content: space-around;
+  margin : 15em 12.8028125%;
+
+}
+.eap__content p{
+  font-size: 2em;
+  line-height: $lineheight;
+  color: dimgrey;
+  padding: 4em 0% 2em 0% ;
+  position: relative;
+  font-weight: 300;
+  margin-bottom:1.3em;
+}
+.anim__bloq{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+blockquote{
+  font-weight: 100;
+  line-height: $lineheight;
+  color: dimgrey;
+  font-size: 2em;
+}
+.eap__content blockquote:before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/general/left-quote.svg");
+  opacity: 0.5;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  position: absolute;
+  top: -20px;
+  left: -60px;
+}
+
+.eap__laurie{
+  position: relative;
+}
+
+.eap__content blockquote:after {
+  content: '';
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/general/left-quote.svg");
+  opacity: 0.5;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  position: absolute;
+  bottom: -20px;
+  right: -30px;
+  transform: rotate(180deg);
+}
+.eap__content div{
+  text-align: center;
+  width: 30%;
+  margin-right: 5%;
+  position: relative;
+  top:-30px;
+}
+.eap__laurie a{
+  @include button;
+  letter-spacing: 0.04em;
+  position: absolute;
+  top: 60%;
+  left: 61%;
+}
+.eap__laurie a:hover{
+  @include button_hover;
+}
+
+/*//////////////////////////////////////////END_ENCART_APROPOS///////////////////////////////////////////////////////////*/
+
+/*//////////////////////////////////////////ENCART_PROJECTS///////////////////////////////////////////////////////////*/
+
+.encart_projet{
+  text-align: center;
+  margin : 11em 12.8028125%;
+  padding: 0em 4%;
+}
+h2{
+@include title;
+}
+.encart_projet ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10em 0%;
+}
+
+/*.encart_projet li{
+  //width: 300px;
+}*/
+.pro__pro__img:hover~span, .pro__pro__img.active~span{
+visibility: visible;
+}
+
+.pro__pro__img:hover, .pro__pro__img.active{
+  background-color: white;
+  opacity: 0.1;
+
+}
+.pro__pro, .pro__par,.pro__art{
+  text-decoration: none;
+}
+.pro__pro__img{
+  width: 300px;
+  height: 220px;
+  margin-bottom: 2em;
+}
+
+.pro__pro{
+  position: relative;
+}
+
+.pro__pro__text{
+  opacity: 0;
+  position: absolute;
+  top: 75px;
+  left: 65px;
+  font-size: 2.5em;
+  color: $gold;
+  font-family: $font;
+}
+
+.pro__projet{
+  left:75px;
+}
+
+.par__projet{
+  left: 80px;
+}
+
+.art__projet{
+  left: 80px;
+}
+
+.pro__div:hover > .pro__pro__img{
+  opacity: 0.1;
+  transition: 0.3s;
+}
+
+
+.pro__div:hover > .pro__pro__text{
+  opacity: 1;
+  transition: 0.3s;
+}
+/*//////////////////////////////////////////END_ENCART_PROJECTS///////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////ENCART_EXPOSITION///////////////////////////////////////////////////////////*/
+
+.expo{
+  background: rgba(193,159,93,0.2) url("../images/Artistique/deep/deep 08 copie.jpg") no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 50vh;
+}
+
+.expositions{
+  margin-bottom: 15em;
+  border-bottom: 1px solid $gold;
+  padding-bottom: 10em;
+}
+
+.expo__div{
+  margin: 0 auto 5em;
+  text-align: center;
+}
+
+.expo__first{
+  border-bottom: 1px solid dimgrey;
+  padding-bottom: 0.5em;
+  display: inline-block;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+ .expo__dates li{
+   font-size: 2em;
+   color: dimgrey;
+   margin-bottom: 1.3em;
+ }
+
+ .expo__dates--upper{
+  text-transform: uppercase;
+ }
+
+ .expo__dates--color{
+   color: $gold;
+   font-family: $font;
+   margin: 0 .3em;
+ }
+
+ .expo__dates--italic{
+   font-style: italic;
+ }
+
+ .expo__dates a{
+   color: $gold;
+   text-decoration: none;
+   border-bottom: 1px solid $gold;
+   padding-bottom: .1em;
+ }
+/*//////////////////////////////////////////END_ENCART_EXPOSITION///////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////INSTAGRAM///////////////////////////////////////////////////////////////////*/
+.instagram{
+border-bottom: 0.5px solid $gold;
+}
+.insta__content{
+  margin : 0em 12.8028125%;
+  //padding: 3em 4%;
+}
+.insta__first{
+  border-bottom: 1px solid dimgrey;
+  padding-bottom: 0.5em;
+  width: 180px;
+  margin-bottom: 2em;
+  text-align: right;
+  margin-left: auto;
+}
+.insta__link{
+  @include button;
+  margin-left: auto;
+  font-size: 1.5em;
+  letter-spacing: 0.04em;
+  display: inline-block;
+}
+.insta__link:hover{
+  @include button_hover;
+}
+.instagram ul{
+  margin-top: 8em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 8em;
+}
+.instagram li{
+  margin-bottom: 3em;
+}
+/*///////////////////////////////////////////END_INSTAGRAM///////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////ENCART_ACHAT///////////////////////////////////////////////////////////////////*/
+
+.encart_acheter_photo{
+  text-align: center;
+  margin : 15em 12.8028125%;
+}
+.encart_acheter_photo h2{
+  @include title;
+  padding-bottom: 3em;
+
+}
+.encart_acheter_photo a{
+  @include button;
+}
+.encart_acheter_photo a:hover{
+  @include button_hover;
+}
+/*//////////////////////////////////////////END_ENCART_ACHAT///////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////FOOTER///////////////////////////////////////////////////////////////////*/
+footer{
+  background-color: rgba(193,159,93,0.2);
+}
+.footer__content{
+  margin : 0em 25%;
+  padding: 5em 4% 0em;
+  text-align: center;
+}
+.footer__contact{
+  @include button;
+}
+.footer__contact:hover{
+  @include button_hover
+}
+.footer__facebook_photo, .footer__insta__photo{
+  width: 35px;
+  height: 35px;
+}
+.footer__flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 40% 4em;
+}
+/*.footer__content p{
+  margin-left: 4%;
+}*/
+/*/////////////////////////////////////////////OTHER_PAGE///////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////PAGE PRO///////////////////////////////////////////////////////////////*/
+.pro__up p{
+  line-height: 2;
+}
+
+.pro__text, .pro__first{
+  margin: 0em 20%;
+}
+.choice_cat_pro{
+  border-bottom: 1px solid $gold;
+  padding-bottom: 5em;
+}
+.pro__cat{
+  border-bottom: 1px solid $gold;
+}
+
+.pro__first{
+  border-bottom: 1px solid dimgrey;
+  padding-bottom: 0.5em;
+  display: inline-block;
+  margin-bottom: 2em;
+  margin-top: 5em;
+  font-size: 3em;
+}
+.pro__text{
+  margin-bottom: 5em;
+  font-size: 1.8em;
+  color: dimgrey;
+}
+#cat{
+  @include title;
+  font-size: 3em;
+  text-align: center;
+}
+.pro ul{
+  display: flex;
+  justify-content: space-between;
+}
+
+.pro__projet{
+  margin: 0em 15%;
+}
+
+/*/////////////////////////////////////////////ENCART_PROJET///////////////////////////////////////////////////////////////*/
+
+.projet__first{
+  margin: 0 auto;
+  display: inline-block;
+}
+/*/////////////////////////////////////////////END_PAGE PRO///////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////PAGE_PRO_CAT//////////////////////////////////////////////////////////////*/
+
+.procat__first{
+  border-bottom: 1px solid dimgrey;
+  padding-bottom: 0.5em;
+  width: 380px;
+  margin-bottom: 3em;
+  margin-left: 20%;
+  margin-top: 8em;
+}
+/*//////////////////////////////////////END_PAGE_PRO_CAT//////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////ENTREPRISE / REPORTAGE / CULTURE///////////////////////////////////////////*/
+
+
+.return  {
+  @include button;
+  color: white;
+  font-size: 1.5em;
+  padding: 0.6em 2% 0.6em 4% ;
+  display: block;
+  width: 90px;
+  margin-top: 5em;
+  position: relative;
+}
+
+.return:before{
+  content: '';
+  width: 25px;
+  height: 25px;
+  background-image: url(../images/general/right-arrow-white.svg);
+  position: absolute;
+  top:8px;
+  left: 8px;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  transform: rotate(180deg);
+}
+
+.return:hover{
+  @include button_hover;
+  background-color: $gold_darker;
+}
+
+.artback{
+  @include button;
+  color: white;
+  font-size: 1.5em;
+  padding: 0.6em 2% 0.6em 4% ;
+  display: block;
+  width: 90px;
+  margin-top: 5em;
+  position: relative;
+}
+
+.artback:before{
+  content: '';
+  width: 25px;
+  height: 25px;
+  background-image: url(../images/general/right-arrow-white.svg);
+  position: absolute;
+  top:8px;
+  left: 8px;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  transform: rotate(180deg);
+}
+
+.artback:hover{
+  @include button_hover;
+  background-color: $gold_darker;
+}
+
+.entreprise{
+  padding-bottom: initial;
+}
+
+//////////////////////////////////////AJAX_CULT/ AJAX_REP/ AJAX_ENT////////////////////////////////////////////////
+
+.pro__pro__list{
+  display: flex;
+  flex-direction: column;
+  margin : 0em 12.8028125%;
+  padding: 0em 4%;
+}
+.pro__pro__list a{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pro__pro__list li:nth-child(odd){
+  background-color: rgba(193,159,93,0.2);
+}
+.pro__pro__list li{
+  margin-bottom: 4em;
+}
+
+.pro__pro__list img{
+  width: 500px;
+  height: auto;
+}
+
+.pro__pro__list--infrabel, .pro__pro__list--campagne,.pro__pro__list--ipsum, .pro__pro__list--jardin, .pro__pro__list--lorem{
+  text-align: right;
+}
+.pro__pro__list span{
+  @include title;
+  font-family: $fontreg;
+  border: 1px solid $gold;
+  padding: 0.5em;
+  margin-right: 8%;
+}
+.pro__pro__list a{
+  text-decoration: none;
+}
+
+/////////////////////////////////////END_AJAX_CULT/ AJAX_REP/ AJAX_ENT/////////////////////////////////////////////////
+////////////////////////////////////ENTREPRISE.HTML///////////////////////////////////////////////////////////////////
+.choice_cat_pro--entreprise, .infrabel{
+  margin : 0em 12.8028125%;
+  padding: 0em 4%;
+}
+.entreprise__first{
+  @include title;
+  display: inline-block;
+  border-bottom: 1px solid dimgrey;
+  padding-bottom: 0.5em;
+  margin: 3em auto 3em;
+}
+
+.infrabel--header--img{
+  width: 100%;
+  height: auto;
+  margin-bottom: 8em;
+  display: block;
+}
+.infrabel p{
+  font-size: 1.8em;
+  margin-bottom: 3em;
+}
+
+.infrabel--content--img{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.infrabel--content--img img{
+  width: 300px;
+  height: auto;
+  margin-bottom: 2em;
+}
+footer{
+  clear: left;
+}
+.encart_projet.art{
+  flex-wrap: wrap;
+  margin: 5em 12.8028125%;
+}
+.encart_projet.pro{
+  flex-wrap: wrap;
+  margin: 5em 12.8028125%;
+}
+.encart_projet.par{
+  flex-wrap: wrap;
+  margin: 5em 12.8028125%;
+}
+////////////////////////////////////////END_ENTREPRISE.HTML///////////////////////////////////////////////////////////////////
+////////////////////////////////////////////PROPOS.HTML///////////////////////////////////////////////////////////////////
+
+.a_propos{
+  @include title;
+  font-family: $fontreg;
+  font-size: 1.3em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.de_moi{
+  font-size: 1.5em;
+}
+.apropos h2{
+  border-bottom: 1px solid dimgrey;
+  padding-bottom: 0.5em;
+  margin: 3em auto 3em;
+  display: inline-block;
+  font-size: 3em;
+}
+.apropos{
+  margin : 0 12.8028125%;
+  padding: 0 4%;
+  text-align: center;
+}
+.apropos img{
+  display: block;
+  margin: 0 auto;
+}
+.apropos--left{
+  font-size: 1.8em;
+  color: dimgrey;
+  line-height: 2;
+  margin-top: 4em;
+  font-weight: 100;
+  border-bottom: 1px solid $gold;
+  padding-bottom: 2em;
+  margin-bottom: 4em;
+}
+.first__para, .second__para, .third__para{
+  padding-bottom: 1em;
+}
+.apropos--right{
+  font-size: 1.8em;
+  color: dimgrey;
+  line-height: 2;
+  font-weight: 100;
+  text-align: right;
+  margin-bottom: 2em;
+}
+.apropos--right span{
+  text-transform: uppercase;
+  color: $gold;
+  font-weight: 700;
+}
+.apropos--right--button{
+  @include button;
+  font-size: 1.5em;
+  display: block;
+  margin-left: auto;
+  width:119px;
+}
+.apropos--right--button:hover{
+  @include button_hover;
+}
+.encart_exposition{
+  background-color: rgba(193,159,93,0.2);
+  padding-bottom: 10em;
+}
+.encart_exposition--adjust{
+  margin : 15em 12.8028125%;
+  padding: 0em 4%;
+}
+
+.expomade__first{
+  border-bottom: 1px solid dimgrey;
+  padding-bottom: 0.5em;
+  display: inline-block;
+  margin-bottom: 4em;
+  margin-top: 5em;
+}
+
+.encart_exposition--img{
+  width: 980px;
+  height: auto;
+}
+////////////////////////////////////////////END_PROPOS.HTML///////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////CONTACT.HTML///////////////////////////////////////////////////////////////////
+
+.contact__first{
+  border-bottom: 1px solid dimgrey;
+  margin-bottom: 1.3em;
+}
+
+.contact--text{
+  @include title;
+  font-size: 2em;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 4em;
+
+}
+
+.contact__coordonnees a{
+  text-decoration: none;
+  color: dimgrey;
+  font-size: 1.5em;
+  font-weight: 100;
+}
+.contact__coordonnees div{
+  margin-bottom: 3em;
+}
+
+.contact{
+display: flex;
+  justify-content: space-between;
+  margin : 15em 12.8028125%;
+  padding: 0em 10%;
+}
+
+.contact__form{
+  margin-top: 5em;
+}
+
+.contact__coordonnees--flex{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3em;
+}
+
+.contact__form label{
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 100;
+  color: dimgrey;
+}
+
+.contact__form input{
+  height: 40px;
+  border: 1px solid $gold;
+  padding: 0 5%;
+}
+
+.contact__form input[type=submit]{
+  @include button;
+  font-weight: 100;
+  font-size: 1.5em;
+  width: 250px;
+}
+.contact__form textarea{
+  border:1px solid $gold;
+  padding: 1em 5%;
+}
+
+.contact__form input[type=submit]:hover{
+  @include button_hover;
+}
+
+
+.instagram--logo{
+  border: none;
+}
+
+.contact__symbol:before{
+  font-size: .6em;
+  margin-right: .2em;
+}
+
+.contact__mail{
+  color: $gold;
+  font-size: 2.3em;
+  margin-right: .2em;
+}
+
+.flex{
+  display: flex;
+}
+
+///////////////////////////////////////////////END_CONTACT.HTML///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////Rezervhi.HTML///////////////////////////////////////////////////////////////////
+
+.reverzhi h2{
+  @include title;
+  text-align: center;
+  margin-top: 3em;
+  font-size: 4em;
+}
+
+.reverzhi p{
+  margin: 3em $margin;
+  font-size: 1.6em;
+  line-height: 1.8;
+  color: dimgrey;
+  font-weight: 100;
+}
+
+.reverzhi blockquote{
+  margin: 6em auto 0.8em;
+  font-size: 1.8em;
+  line-height: 1.8;
+  color: dimgrey;
+  font-weight: 100;
+  text-align: center;
+  width: 35%;
+  display: block;
+  position: relative;
+}
+
+.reverzhi{
+  text-align: center;
+}
+.reverzhi .author{
+  margin: 1.5em auto 1em;
+  display: inline-block;
+  font-weight: 800;
+  color: black;
+  font-size: 1.8em;
+}
+
+.reverzhi blockquote:before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  background-image: url("../images/general/left-quote.svg");
+  opacity: 0.5;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  position: absolute;
+  top: -20px;
+  left: -30px;
+}
+
+.reverzhi blockquote:after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  background-image: url("../images/general/left-quote.svg");
+  opacity: 0.5;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  position: absolute;
+  bottom: -20px;
+  right: -5px;
+  transform: rotate(180deg);
+}
+.reverzhimg{
+  margin: 10em $margin 10em;
+}
+.reverzhi--footer{
+  clear: left;
+}
+
+.fa-facebook-square, .fa-instagram{
+  color: $gold;
+  font-size: 4em;
+}
+
+.burgercss, .checkbox{
+  display: none;
+}
+
+.checkbox{
+  opacity: 0;
+}
+
+.checkbox:checked~ nav{
+  display: flex;
+}
+
+.img__gallery{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button__gallery__previous,.button__gallery__next{
+  text-decoration: none;
+  color: $gold;
+  font-size: 5em;
+  padding: 1%;
+}
+
+.image__expo{
+  width: 800px;
+}
+
+.fa-angle-right{
+  color: black;
+}
+
+.projet__cat{
+  margin: 4em 0;
+}
+
+.acheter__photos__border{
+  border-top: 1px solid $gold;
+}
+
+.facebook__contact{
+  margin-top: 2.1em;
+}
+
+.mail__info{
+  margin-top: .5em;
+}
+
+/// SEE MORE Mariages
+
+.ex3 .hide3 {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+.ex3 input[type="checkbox"]:checked + .hide3 {
+  opacity: 1;
+  height: auto;
+  transition: all 0.5s ease;
+  display: flex;
+}
+
+.link__picmariage{
+  font-family: $fontlight;
+  color: white;
+  font-size: 2em;
+  margin: 5em auto 5em;
+  display: inline-block;
+  background-color: $gold;
+  padding: .5em 2em;
+}
+
+.input__mariage{
+  visibility: hidden;
+  display: none;
+  border: none;
+  background-color: none;
+}
+
+.ex3{
+  text-align: center;
+}
+
+.envoye__div{
+  margin: 0 $margin;
+  text-align: center;
+}
+.envoye__div p{
+  font-size: 4em;
+  color: $gold;
+  font-family: $font;
+  margin: 4em 0;
+}
+
+.errors{
+  position: relative;
+}
+
+.errors ul li p{
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-family: $fontsemib;
+  color: red;
+  margin-bottom: .5em;
+}
+
+.fa-exclamation{
+  color: red;
+  margin-right: .3em;
+}
+
+.checkbox:focus ~ .burgercss>span{
+  background-color: red;
+}
+@import 'responsive.scss';
+
+
+
+
+
+
+
+

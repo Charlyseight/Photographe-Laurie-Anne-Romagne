@@ -1,0 +1,23 @@
+@mixin button{
+  text-decoration: none;
+  padding: 0.5em 1.5em;
+  border-radius: 50px;
+  font-size: 1.5em;
+  background-color: $gold;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-align: center;
+  //display: inline-block;
+}
+@mixin button_hover{
+  box-shadow: inset 0em 5em 0em 0 (adjust_hue($gold_darker, 0deg));
+  color: white;
+  transition-duration: 0.2s;
+}
+@mixin title{
+  letter-spacing: 0.1em;
+  color: dimgrey;
+  font-size: 3em;
+  font-family: $font;
+}
